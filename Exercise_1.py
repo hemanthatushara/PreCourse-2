@@ -1,3 +1,4 @@
+
 # Python code to implement iterative Binary  
 # Search. 
   
@@ -5,8 +6,26 @@
 # if present, else returns -1 
 def binarySearch(arr, l, r, x): 
   
-  #write your code here
-  
+    while l<= r:
+ 
+        mid = (r+ l) // 2
+ 
+        # If x is greater, ignore left half
+        if arr[mid] < x:
+            l = mid + 1
+ 
+        # If x is smaller, ignore right half
+        elif arr[mid] > x:
+            r = mid - 1
+ 
+        # means x is present at mid
+        else:
+            return mid
+ 
+    # If we reach here, then the element was not present
+    return -1
+ 
+
     
   
 # Test array 
@@ -17,6 +36,6 @@ x = 10
 result = binarySearch(arr, 0, len(arr)-1, x) 
   
 if result != -1: 
-    print "Element is present at index % d" % result 
+    print ("Element is present at index % d"% result )
 else: 
-    print "Element is not present in array"
+    print ("Element is not present in array")
