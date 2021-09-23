@@ -1,6 +1,15 @@
 # Python program for implementation of Quicksort Sort 
   
 # give you explanation for the approach
+
+   
+# Time Complexity :
+# Space Complexity :
+# Did this code successfully run on Leetcode : No
+# Any problem you faced while coding this : Goes into an infinite loop on line 21
+
+
+
 def partition(arr,low,high):
   
   
